@@ -1,1 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Train Scheduler</title>
+    <!-- Firebase Link -->
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-app.js"></script>
+    <!-- Jquery Link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Bootstrap Link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-4">Train Scheduler</h1>
+            <p class="lead">CHOO CHOO MOTHATRUCKAS</p>
+        </div>
+    </div>
+    <br>
+    <div class="card text-center">
+        <div class="card-header">
+            <h5>Train Schedule</h5>
+        </div>
+        <div class="card-body">
+            <table id="trainTable" class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Train Name</th>
+                        <th scope="col">Destination</th>
+                        <th scope="col">Frequency (min)</th>
+                        <th scope="col">Next Arrival</th>
+                        <th scope="col">Minutes Away</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <div class="card-footer text-muted">
+        </div>
+    </div>
+    <br><br>
+    <div class="card text">
+        <div class="card-header">
+            <h5>Add a Train</h5>
+        </div>
+        <div class="card-body">
+            <form>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Train Name</label>
+                    <input type="name" class="form-control" id="nameInput" aria-describedby="emailHelp"
+                        placeholder="Enter train name">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Destination</label>
+                    <input type="destination" class="form-control" id="destInput" placeholder="Password">
+                </div>
+                <div class="form-group">
+                        <label for="exampleInputPassword1">First Train Time (HH:mm) </label>
+                        <input type="destination" class="form-control" id="arrivInput" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                            <label for="exampleInputPassword1">Frequency (min)</label>
+                            <input type="destination" class="form-control" id="destInput" placeholder="Password">
+                        </div>
+                <button type="submit" id="addTrain" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+        <div class="card-footer text-muted">
+        </div>
+    </div>
+
+    <script src="assets/javascript/app.js"></script>
+</body>
+
+</html>
